@@ -1,7 +1,9 @@
 using UnityEngine;
+using TMPro;
 
 public class Variable : MonoBehaviour
 {
+    [Header("Variables C#")]
     [SerializeField]
     private int vida = 1;
     [SerializeField]
@@ -11,17 +13,20 @@ public class Variable : MonoBehaviour
 
     public string nombre = "Roberto";
     [SerializeField]
-    private float tiempo = 60.5f;
+    private float tiempo = 60f;
     [SerializeField]
     private bool isAlive = true;
-    
-    public GameObject camera;
+
+    [Header("Variables Unity")]
+    [SerializeField]
+    private TMP_Text mensaje;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("Hola Mundo!");      
+        mensaje.text = "Hola " + nombre + ", Como estas ?";  
     }
 
     // Update is called once per frame
